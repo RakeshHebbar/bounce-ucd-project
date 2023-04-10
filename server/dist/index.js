@@ -44,3 +44,5 @@ function gracefulShutDown(signal) {
         process.exit(0);
     }));
 }
+module.exports = app;
+//# sourceMappingURL=index.js.map

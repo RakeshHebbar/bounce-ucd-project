@@ -36,3 +36,4 @@ exports.country_route.get("/api/:country", (req, res) => __awaiter(void 0, void 
         res.status(500).send('Failed to fetch data');
     }
 }));
+//# sourceMappingURL=country.js.map

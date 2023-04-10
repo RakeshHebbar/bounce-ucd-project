@@ -41,3 +41,5 @@ function gracefulShutDown(signal: string) {
     process.exit(0);
   });
 }
+
+module.exports = app

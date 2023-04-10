@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
 import logger from "./utils/logger";
-import {country_route} from "./apis/country";
+import {country_route} from "./api/country";
 
 dotenv.config();
 

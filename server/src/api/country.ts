@@ -23,3 +23,5 @@ country_route.get("/api/:country", async (req: Request, res: Response) => {
         res.status(500).send('Failed to fetch data');
       }
 });
+
+module.exports = country_route;

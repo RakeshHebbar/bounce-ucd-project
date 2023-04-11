@@ -11,7 +11,7 @@ This project contains a backend server written using NodeJS and express and a re
 + Typescript
 + Vercel
 
-# Resource
+# Resources
 + [Cors](https://www.npmjs.com/package/cors)
 + [Dotenv](https://www.npmjs.com/package/dotenv)
 + [Winston](https://www.npmjs.com/package/winston)
@@ -22,6 +22,8 @@ This project contains a backend server written using NodeJS and express and a re
 + [Typescript](https://www.npmjs.com/package/typescript)
 + [Create React App](https://create-react-app.dev/)
 + [React Bootstrap](https://www.npmjs.com/package/react-bootstrap)
++ [Jest](https://www.npmjs.com/package/jest)
++ [Super Test](https://www.npmjs.com/package/supertest)
 
 
 # Summary of Code
@@ -69,6 +71,7 @@ The client is a react typescript application that fetches the data from the back
 ## server
 
 + Go to server directory `cd server`
++ Install dependencies `npm install`
 + Build the node app `npm run build`
 + Start the app `npm run start`
 + To start in Development mode `npm run dev`
@@ -80,7 +83,8 @@ To check if the api is working http://localhost:8000/api/Ireland
 
 ## client
 + Go to client directory `cd client`
-+ Change the **api_url** in [App.tsx](/client/src/App.tsx) to the localhost one of the server instead of the vercel url
++ Change the **api_url** in [App.tsx](/client/src/App.tsx) to the localhost one of the server instead of the Vercel url
++ Install dependencies `npm install`
 + To start the client `npm start`
 
 To access the client go to http://localhost:3000

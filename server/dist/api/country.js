@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.country_route = void 0;
 const express_1 = __importDefault(require("express"));
-// import logger from "../utils/logger";
+const logger_1 = __importDefault(require("../utils/logger"));
 exports.country_route = express_1.default.Router();
 // External API path
 const rest_country_api = "https://restcountries.com/v3.1/name/";
@@ -26,13 +26,13 @@ exports.country_route.get("/api/:country", (req, res) => __awaiter(void 0, void 
     try {
         const country = req.params.country;
         const url = rest_country_api + country;
-        console.info(`Country API = ${url}`);
+        logger_1.default.info(`Country API = ${url}`);
         const response = yield fetch(url);
         const data = yield response.json();
         res.send(data);
     }
     catch (error) {
-        console.error(error);
+        logger_1.default.error(error);
         res.status(500).send('Failed to fetch data');
     }
 }));

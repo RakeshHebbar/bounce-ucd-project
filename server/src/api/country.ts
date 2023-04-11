@@ -1,5 +1,5 @@
 import express, {Request, Response } from "express";
-import logger from "../utils/logger";
+// import logger from "../utils/logger";
 
 export const country_route = express.Router();
 
@@ -14,14 +14,14 @@ country_route.get("/api/:country", async (req: Request, res: Response) => {
     try {
         const country = req.params.country;
         const url = rest_country_api + country;
-        logger.info(`Country API = ${url}`);
+        console.info(`Country API = ${url}`);
         const response = await fetch(url);
         const data = await response.json();
         res.send(data);
       } catch (error) {
-        logger.error(error);
+        console.error(error);
         res.status(500).send('Failed to fetch data');
       }
 });
 
-module.exports = country_route;
+// module.exports = country_route;

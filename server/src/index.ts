@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
-import logger from "./utils/logger";
+// import logger from "./utils/logger";
 import {country_route} from "./api/country";
 
 dotenv.config();
@@ -18,7 +18,7 @@ app.use(country_route);
 const port = process.env.PORT || 8000;
 
 const server = app.listen(port, () => {
-  logger.info(`App listening on port http://localhost:${port}`);
+  console.info(`App listening on port http://localhost:${port}`);
 });
 
 // handled signals for shutdown
@@ -36,7 +36,7 @@ function gracefulShutDown(signal: string) {
   process.on(signal, async () => {
     server.close();
 
-    logger.info("My work here is done...");
+    console.info("My work here is done...");
 
     process.exit(0);
   });

@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
 const express_1 = __importDefault(require("express"));
-const logger_1 = __importDefault(require("./utils/logger"));
+// import logger from "./utils/logger";
 const country_1 = require("./api/country");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
@@ -26,7 +26,7 @@ app.use(country_1.country_route);
 // server port
 const port = process.env.PORT || 8000;
 const server = app.listen(port, () => {
-    logger_1.default.info(`App listening on port http://localhost:${port}`);
+    console.info(`App listening on port http://localhost:${port}`);
 });
 // handled signals for shutdown
 const signals = ["SIGTERM", "SIGINT"];
@@ -40,7 +40,7 @@ signals.forEach(function (signal) {
 function gracefulShutDown(signal) {
     process.on(signal, () => __awaiter(this, void 0, void 0, function* () {
         server.close();
-        logger_1.default.info("My work here is done...");
+        console.info("My work here is done...");
         process.exit(0);
     }));
 }

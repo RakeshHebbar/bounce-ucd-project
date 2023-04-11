@@ -1,15 +1,15 @@
-import pino from "pino";
+// import pino from "pino";
 
-/**
- * Pino logger configuration
- */
-const logger = pino({
-  transport: {
-    target: "pino-pretty",
-    options: {
-      colorize: true,
-    },
-  },
-});
+// /**
+//  * Pino logger configuration
+//  */
+// const logger = pino({
+//   transport: {
+//     target: "pino-pretty",
+//     options: {
+//       colorize: true,
+//     },
+//   },
+// });
 
-export default logger;
+// export default logger;

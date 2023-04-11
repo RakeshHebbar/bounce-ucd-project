@@ -68,6 +68,11 @@ The client is a react typescript application that fetches the data from the back
 
 # Running Application
 
+## Requirement 
+
+Node version: `v19.8+` <br/>
+Node version used when developing: `v19.8.1`
+
 ## server
 
 + Go to server directory `cd server`
@@ -83,9 +88,17 @@ To check if the api is working http://localhost:8000/api/Ireland
 
 ## client
 + Go to client directory `cd client`
-+ Change the **api_url** in [App.tsx](/client/src/App.tsx) to the localhost one of the server instead of the Vercel url
++ Change the **api_url** in [App.tsx](/client/src/App.tsx) to `http://localhost:8000` instead of the Vercel url
 + Install dependencies `npm install`
-+ To start the client `npm start`
+
+Development mode
++ To start the client in development mode `npm start`
+
+Production build and run
++ To create a production build `npm run build`
++ To serve the newly generated build folder with static folder 
+   +  `npm install -g serve`
+   + `serve -s build`
 
 To access the client go to http://localhost:3000
 

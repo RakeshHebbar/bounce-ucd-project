@@ -47,10 +47,12 @@ function App() {
     setIsSubmit(true);
     try {
       // fetch the data from the backend api
-      const response = await fetch(`${api_url}/api/${query}`);
-      const json = await response.json();
-      // set the response to results and update the loading state
-      setResults(json);
+      if(query.length > 0) {
+        const response = await fetch(`${api_url}/api/${query}`);
+        const json = await response.json();
+        // set the response to results and update the loading state
+        setResults(json);
+      }
       setIsLoading(false);
     } catch (error) {
       // catch error and update error state

@@ -27,6 +27,9 @@ function App() {
   const [error, setError] = useState("");
   const [isSubmit, setIsSubmit] = useState(false);
 
+  // server deployed on vercel
+  let api_url = "https://bounce-ucd-project-server.vercel.app";
+
   // Number formatter for formatting population
   let formatter = Intl.NumberFormat("en", { notation: "compact" });
 
@@ -44,7 +47,7 @@ function App() {
     setIsSubmit(true);
     try {
       // fetch the data from the backend api
-      const response = await fetch(`api/${query}`);
+      const response = await fetch(`${api_url}/api/${query}`);
       const json = await response.json();
       // set the response to results and update the loading state
       setResults(json);
